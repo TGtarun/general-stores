@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS and javascrpit and jquery-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <title>Create Invoice</title>
+        <style>
+          footer{
+                font-size: 15px;
+                font-family: verdana;
+            }
+            footer a{
+                color: yellow;
+                font-family: verdana;
+                font-size: 15px;
+            }
+            footer a:hover{
+                color: white;
+                font-family: verdana;
+                text-decoration: none;
+                font-size: 17px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        
+        
+        <nav class="navbar  navbar-expand-lg navbar-dark" style="background-color: #212121;">
+            <a class="navbar-brand" href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                App Name
+              </a>
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Billing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Records</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Purchase</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Settings</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">LoyaltyProgram</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- <div class="jumbotron" style="color: white;font-family: Verdana;background-color: #009688;">
+            <h1 class="text-center">Create Invoices</h1>
+            <p class="text-center">Make beautiful invoices with one click!</p>
+        </div> -->
+        
+        <div class="row" style="margin-top: 50px;">
+          <div class="container-fluid" style="height: 800px;width: 500px;margin-left: 20px;background-color: #F5F5F5;">
+            
+            <form>
+            <h1 class="text-center pt-1" style="color: #CDDC39;font-family: verdana;text-decoration: underline;">Create Invoices</h1>
+            <h5 class="text-center">Create invoices in a click!</h5>
+              <h5>1).Item Details</h5>
+              <div class="form-group row">
+                <label for="input1" class="col-sm-2 col-form-label">ItemName</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="input1" placeholder="Eg. Biscuits">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="input2" class="col-sm-2 col-form-label">BarCode</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="input2" placeholder="AB1254ASUYNCTG6">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="input3" class="col-sm-2 col-form-label">HSN/SAC</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="input3" placeholder="Eg. 440013">
+                </div>
+              </div>
+              
+            
+                  
+                  <div class="row">
+                      <div class="form-group col-md-6">
+                          <label for="rate">Rate Per Unit(₹)</label>
+                          <input type="text" class="form-control" id="rate" placeholder="Rate">
+                      </div>
+                      <div class="form-group col-md">
+                          <label for="mrp">MRP(₹)</label>
+                          <input type="text" class="form-control" id="mrp" placeholder="#">
+                        </div>
+                        <div class="form-group col-md">
+                          <label for="quan">Quantity</label>
+                          <input type="text" class="form-control" id="quan" placeholder="#">
+                        </div>
+                  </div>
+                  
+                  <div class="row">
+                      <div class="form-group col-md">
+                        <label for="cgst">CGST(%)</label>
+                        <input type="text" class="form-control" id="cgst" placeholder="Eg. 18%">
+                      </div>
+                      <div class="form-group col-md">
+                        <label for="sgst">SGST(%)</label>
+                        <input type="text" class="form-control" id="sgst" placeholder="Eg. 18%">
+                      </div>
+                  </div>
+                  <h5>2).Customer Details</h5>
+                  
+                  <div class="form-group row">
+                    <label for="input5" class="col-sm-2 col-form-label">Customer/  Firm</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="input5" placeholder="ABC Traders">
+                    </div>
+                  </div>
+              
+                  <div class="form-group row">
+                    <label for="input4" class="col-sm-2 col-form-label">Address</label>
+                    <div class="col-sm-10">
+                      <textarea type="text" class="form-control" id="input4" placeholder=
+                      "Cecilia Chapman 711-2880 Nulla St. Mankato Mississippi 96522 (257) 563-7401"></textarea>
+                      
+                      
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="input6" class="col-sm-2 col-form-label">GSTIN</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="input6" placeholder="22AAAAA0000A1Z5">
+                    </div>
+                  </div>
+                  <div class="text-center">
+                      <button type="submit" class="btn btn-success">Create</button>
+                  </div>
+                  
+                    
+                  
+            </form>
+          </div>
+          <div class="container-fluid mr-2" style="width: 1000px;background-color: #F5F5F5;">
+          <h2 class="text-center" style="color: #CDDC39;font-family: verdana;text-decoration:underline;">INVOICES</h2>
+        <div class="container pt-1">
+            <table class="table table-striped table-bordered">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">SlNo</th>
+                    <th scope="col">Code</th>
+                    <th scope="col">Item</th>
+                    <th scope="col">Price/Unit</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">GST%</th>
+                    <th scope="col">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>JGDHFHGH</td>
+                    <td>Biscuit</td>
+                    <td>120</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>240</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>JGDHFHGH</td>
+                    <td>Biscuit</td>
+                    <td>120</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>240</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>JGDHFHGH</td>
+                    <td>Biscuit</td>
+                    <td>120</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>240</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>JGDHFHGH</td>
+                    <td>Biscuit</td>
+                    <td>120</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>240</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>JGDHFHGH</td>
+                    <td>Biscuit</td>
+                    <td>120</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>240</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>JGDHFHGH</td>
+                    <td>Biscuit</td>
+                    <td>120</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>240</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>JGDHFHGH</td>
+                    <td>Biscuit</td>
+                    <td>120</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>240</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>JGDHFHGH</td>
+                    <td>Biscuit</td>
+                    <td>120</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>240</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>JGDHFHGH</td>
+                    <td>Biscuit</td>
+                    <td>120</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>240</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>JGDHFHGH</td>
+                    <td>Biscuit</td>
+                    <td>120</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>240</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>JGDHFHGH</td>
+                    <td>Biscuit</td>
+                    <td>120</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>240</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>JGDHFHGH</td>
+                    <td>Biscuit</td>
+                    <td>120</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>240</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>JGDHFHGH</td>
+                    <td>Biscuit</td>
+                    <td>120</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>240</td>
+                  </tr>
+
+                </tbody>
+              </table>
+        </div></div>
+        </div>
+    <!-- footer -->
+    <footer class="section footer-classic context-dark bg-image mt-5" style="background: #2d3246;color: white;">
+      <div class="container pt-1">
+        <div class="row row-30">
+          <div class="col-md-4 col-xl-5 mt-5">
+              <p>Here Comes the description of our app.Here Comes the description of our app.Here Comes the description of our app.Here Comes the description of our app.</p>
+            
+          </div>
+          <div class="col-md-4 col-xl-3 pt-1">
+            <h5>Quick Links</h5>
+            <ul class="nav-list">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Purchase</a></li>
+              <li><a href="#">Billing</a></li>
+              <li><a href="#">Records</a></li>
+              <li><a href="#">LoyaltyProgram</a></li>
+              <li><a href="#">Settings</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 pt-1">
+            <h5>Contacts</h5>
+            <dl class="contact-list">
+              <dt>Address:</dt>
+              <dd>dummy city, dummy state, dummy country</dd>
+            </dl>
+            <dl class="contact-list">
+              <dt>email:</dt>
+              <dd><a href="#">dummy@gmail.com</a></dd>
+            </dl>
+            <dl class="contact-list">
+              <dt>phones:</dt>
+              <dd><a href="#">1234567890</a> <span>or</span> <a href="#">1234567891</a>
+              </dd>
+            </dl>
+          </div>
+          
+        </div>
+      </div>
+      
+    </footer>
+    </body>
+</html>
+
+
+  
