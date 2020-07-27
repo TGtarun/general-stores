@@ -27,6 +27,49 @@
                 text-decoration: none;
                 font-size: 17px;
             }
+
+            @media screen and (max-width: 768px) {
+              #divform{
+              height: 1300px;width: 500px;margin-left: screen;background-color: orange;
+             }
+             #divtable{
+               margin-top: 20px;
+             }
+            }
+
+            @media screen and (min-width: 768px) {
+              #divform{
+              height: 800px;width: 500px;background-color: orange;
+             }
+
+
+            
+            }
+
+            @media screen and (min-width: 992px) {
+              #divform{
+              height: 800px;width: 500px;background-color: orange;
+             }
+                
+             
+            }
+
+            
+            @media screen and (min-width: 1200px) {
+             #divform{
+              height: 800px;width: 500px;margin-left: 20px;background-color: orange;}
+            }
+            
+            @media screen and (min-width: 1500px) {
+             #divform{
+              height: 800px;width: 500px;margin-left: 20px;background-color: orange;}
+
+              #divtable{
+                margin-left: -50px;width: auto;
+            }
+            }
+            
+
         </style>
     </head>
     <body>
@@ -73,93 +116,96 @@
         </div> -->
         
         <div class="row" style="margin-top: 50px;">
-          <div class="container-fluid" style="height: 800px;width: 500px;margin-left: 20px;background-color: #F5F5F5;">
+          <div class="col-xl-5">
+            <div class="container-fluid" id="divform">
             
-            <form>
-            <h1 class="text-center pt-1" style="color: #CDDC39;font-family: verdana;text-decoration: underline;">Create Invoices</h1>
-            <h5 class="text-center">Create invoices in a click!</h5>
-              <h5>1).Item Details</h5>
-              <div class="form-group row">
-                <label for="input1" class="col-sm-2 col-form-label">ItemName</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="input1" placeholder="Eg. Biscuits">
+              <form>
+              <h2 class="text-center pt-1" style="color: white;font-family: verdana;">Create Invoices</h2>
+              <h6 class="text-center">Create invoices in a click!</h6>
+                <h5>1).Item Details</h5>
+                <div class="form-group row">
+                  <label for="input1" class="col-sm-2 col-form-label">ItemName</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="input1" placeholder="Eg. Biscuits">
+                  </div>
                 </div>
-              </div>
-              <div class="form-group row">
-                <label for="input2" class="col-sm-2 col-form-label">BarCode</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="input2" placeholder="AB1254ASUYNCTG6">
+                <div class="form-group row">
+                  <label for="input2" class="col-sm-2 col-form-label">BarCode</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="input2" placeholder="AB1254ASUYNCTG6">
+                  </div>
                 </div>
-              </div>
-              <div class="form-group row">
-                <label for="input3" class="col-sm-2 col-form-label">HSN/SAC</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="input3" placeholder="Eg. 440013">
+                <div class="form-group row">
+                  <label for="input3" class="col-sm-2 col-form-label">HSN/SAC</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="input3" placeholder="Eg. 440013">
+                  </div>
                 </div>
-              </div>
+                
               
-            
-                  
-                  <div class="row">
-                      <div class="form-group col-md-6">
-                          <label for="rate">Rate Per Unit(₹)</label>
-                          <input type="text" class="form-control" id="rate" placeholder="Rate">
-                      </div>
-                      <div class="form-group col-md">
-                          <label for="mrp">MRP(₹)</label>
-                          <input type="text" class="form-control" id="mrp" placeholder="#">
+                    
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="rate">Rate Per Unit(₹)</label>
+                            <input type="text" class="form-control" id="rate" placeholder="Rate">
                         </div>
                         <div class="form-group col-md">
-                          <label for="quan">Quantity</label>
-                          <input type="text" class="form-control" id="quan" placeholder="#">
-                        </div>
-                  </div>
-                  
-                  <div class="row">
-                      <div class="form-group col-md">
-                        <label for="cgst">CGST(%)</label>
-                        <input type="text" class="form-control" id="cgst" placeholder="Eg. 18%">
-                      </div>
-                      <div class="form-group col-md">
-                        <label for="sgst">SGST(%)</label>
-                        <input type="text" class="form-control" id="sgst" placeholder="Eg. 18%">
-                      </div>
-                  </div>
-                  <h5>2).Customer Details</h5>
-                  
-                  <div class="form-group row">
-                    <label for="input5" class="col-sm-2 col-form-label">Customer/  Firm</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="input5" placeholder="ABC Traders">
+                            <label for="mrp">MRP(₹)</label>
+                            <input type="text" class="form-control" id="mrp" placeholder="#">
+                          </div>
+                          <div class="form-group col-md">
+                            <label for="quan">Quantity</label>
+                            <input type="text" class="form-control" id="quan" placeholder="#">
+                          </div>
                     </div>
-                  </div>
-              
-                  <div class="form-group row">
-                    <label for="input4" class="col-sm-2 col-form-label">Address</label>
-                    <div class="col-sm-10">
-                      <textarea type="text" class="form-control" id="input4" placeholder=
-                      "Cecilia Chapman 711-2880 Nulla St. Mankato Mississippi 96522 (257) 563-7401"></textarea>
-                      
-                      
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="input6" class="col-sm-2 col-form-label">GSTIN</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="input6" placeholder="22AAAAA0000A1Z5">
-                    </div>
-                  </div>
-                  <div class="text-center">
-                      <button type="submit" class="btn btn-success">Create</button>
-                  </div>
-                  
                     
-                  
-            </form>
+                    <div class="row">
+                        <div class="form-group col-md">
+                          <label for="cgst">CGST(%)</label>
+                          <input type="text" class="form-control" id="cgst" placeholder="Eg. 18%">
+                        </div>
+                        <div class="form-group col-md">
+                          <label for="sgst">SGST(%)</label>
+                          <input type="text" class="form-control" id="sgst" placeholder="Eg. 18%">
+                        </div>
+                    </div>
+                    <h5>2).Customer Details</h5>
+                    
+                    <div class="form-group row">
+                      <label for="input5" class="col-sm-2 col-form-label">Customer/  Firm</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="input5" placeholder="ABC Traders">
+                      </div>
+                    </div>
+                
+                    <div class="form-group row">
+                      <label for="input4" class="col-sm-2 col-form-label">Address</label>
+                      <div class="col-sm-10">
+                        <textarea type="text" class="form-control" id="input4" placeholder=
+                        "Cecilia Chapman 711-2880 Nulla St. Mankato Mississippi 96522 (257) 563-7401"></textarea>
+                        
+                        
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="input6" class="col-sm-2 col-form-label">GSTIN</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="input6" placeholder="22AAAAA0000A1Z5">
+                      </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success">Create</button>
+                    </div>
+                    
+                      
+                    
+              </form>
+            </div>
           </div>
-          <div class="container-fluid mr-2" style="width: 1000px;background-color: #F5F5F5;">
-          <h2 class="text-center" style="color: #CDDC39;font-family: verdana;text-decoration:underline;">INVOICES</h2>
-        <div class="container pt-1">
+          <div class="col-xl">
+            <div class="container-fluid mr-2"  id="divtable">
+          <h2 class="text-center" style="font-family: verdana;">INVOICES</h2>
+        <div class="table-responsive pt-1">
             <table class="table table-striped table-bordered">
                 <thead class="thead-dark">
                   <tr>
@@ -169,7 +215,7 @@
                     <th scope="col">Price/Unit</th>
                     <th scope="col">Quantity</th>
                     <th scope="col">GST%</th>
-                    <th scope="col">Total</th>
+                    <th scope="col">Sub Total</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -227,73 +273,18 @@
                     <td>0</td>
                     <td>240</td>
                   </tr>
+        
                   <tr>
-                    <th scope="row">1</th>
-                    <td>JGDHFHGH</td>
-                    <td>Biscuit</td>
-                    <td>120</td>
-                    <td>2</td>
-                    <td>0</td>
-                    <td>240</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>JGDHFHGH</td>
-                    <td>Biscuit</td>
-                    <td>120</td>
-                    <td>2</td>
-                    <td>0</td>
-                    <td>240</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>JGDHFHGH</td>
-                    <td>Biscuit</td>
-                    <td>120</td>
-                    <td>2</td>
-                    <td>0</td>
-                    <td>240</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>JGDHFHGH</td>
-                    <td>Biscuit</td>
-                    <td>120</td>
-                    <td>2</td>
-                    <td>0</td>
-                    <td>240</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>JGDHFHGH</td>
-                    <td>Biscuit</td>
-                    <td>120</td>
-                    <td>2</td>
-                    <td>0</td>
-                    <td>240</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>JGDHFHGH</td>
-                    <td>Biscuit</td>
-                    <td>120</td>
-                    <td>2</td>
-                    <td>0</td>
-                    <td>240</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>JGDHFHGH</td>
-                    <td>Biscuit</td>
-                    <td>120</td>
-                    <td>2</td>
-                    <td>0</td>
-                    <td>240</td>
+                    
+                    <td colspan="6"><h4 class="float-right">Total</h4></td>
+                    <td><h4>20040</h4></td>
                   </tr>
 
                 </tbody>
               </table>
         </div></div>
+          </div>
+          
         </div>
     <!-- footer -->
     <footer class="section footer-classic context-dark bg-image mt-5" style="background: #2d3246;color: white;">
