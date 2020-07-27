@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS and javascrpit and jquery-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <title>AdvanceSettings</title>
+        <style>
+            footer{
+                font-size: 15px;
+                font-family: verdana;
+            }
+            footer a{
+                color: yellow;
+                font-family: verdana;
+                font-size: 15px;
+            }
+            footer a:hover{
+                color: white;
+                font-family: verdana;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            @media screen and (max-width: 768px) {
+                #ContMain{
+                margin-top: 100px;
+                background-color: #D1C4E9;
+                height: 600px;
+                width: 450px;
+                position: relative;
+              }
+              #btnAS{
+                margin-top: 10px;
+              }  
+              #btnSave{
+                  margin-left: 180px;
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                #ContMain{
+                margin-top: 100px;
+                background-color: #D1C4E9;
+                height: 600px;
+                width: 800px;
+                position: relative;
+              }
+              #btnSave{
+                  margin-left: 350px;
+                }
+                
+            }
+
+            @media screen and (min-width: 992px) {
+                #ContMain{
+                margin-top: 100px;
+                background-color: #D1C4E9;
+                height: 500px;
+                width: 800px;
+                position: relative;
+              }
+              #btnSave{
+                  margin-left: 350px;
+                }
+                
+                
+            }
+
+            @media screen and (min-width: 1200px) {
+              #btnAS{
+                height: 50px;
+                width: 265px;
+              }  
+
+              #ContMain{
+                margin-top: 100px;
+                background-color: #D1C4E9;
+                height: 450px;
+                width: 800px;
+                position: relative;
+              }
+
+              #btnSave{
+                margin-left: 350px;
+              }
+                
+            }
+        </style>
+    </head>
+    <body>
+        
+        
+        
+        <nav class="navbar  fixed-top navbar-expand-lg navbar-dark" style="background-color: #212121;">
+            <a class="navbar-brand" href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                App Name
+              </a>
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Billing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Records</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Purchase</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Settings</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">LoyaltyProgram</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="container" id="ContMain">
+          <div class="row d-flex align-item-center justify-content-center ">
+            <button class="btn btn-primary"  id="btnAS">Store Information</button>
+            <button class="btn btn-danger"  id="btnAS">Footer Lines</button>
+            <button class="btn" style="background-color: #D1C4E9;" id="btnAS">Advanced Settings</button>
+          </div>
+          <form class="pt-1">
+            <div class="form-group row">
+              <label for="input1" class="col-sm-2 col-form-label">License File</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="input1" placeholder="SDFGHJKUYTR">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="input2" class="col-sm-2 col-form-label">Working Folder</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="input2" placeholder="GFGJJKJYYGRDVJJKK">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="input3" class="col-sm-2 col-form-label">DB Backup Path</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="input3" placeholder="FFFGYFFSGBBBDVG">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="input4" class="col-sm-2 col-form-label">Financial Year Start Month</label>
+              <div class="col-sm-10">
+                <select id="input4">
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="Auguest">Auguest</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                  </select>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-xl-12 col-xs-12">
+                <button class="btn" style="width: 100%;background-color: #00BCD4;">BACKUP THE DATABASE</button>
+              </div>
+            
+            <div class="form-group row pt-1 ">
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-success" id="btnSave">Save</button>
+              </div>
+            </div>
+          </form>
+          
+        </div>
+        
+       
+
+    <!-- footer -->
+    <footer class="section footer-classic context-dark bg-image mt-5" style="background: #2d3246;color: white;">
+        <div class="container pt-1">
+          <div class="row row-30">
+            <div class="col-md-4 col-xl-5 mt-5">
+                <p>Here Comes the description of our app.Here Comes the description of our app.Here Comes the description of our app.Here Comes the description of our app.</p>
+              
+            </div>
+            <div class="col-md-4 col-xl-3 pt-1">
+              <h5>Quick Links</h5>
+              <ul class="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Purchase</a></li>
+                <li><a href="#">Billing</a></li>
+                <li><a href="#">Records</a></li>
+                <li><a href="#">LoyaltyProgram</a></li>
+                <li><a href="#">Settings</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4 pt-1">
+              <h5>Contacts</h5>
+              <dl class="contact-list">
+                <dt>Address:</dt>
+                <dd>dummy city, dummy state, dummy country</dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>email:</dt>
+                <dd><a href="#">dummy@gmail.com</a></dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>phones:</dt>
+                <dd><a href="#">1234567890</a> <span>or</span> <a href="#">1234567891</a>
+                </dd>
+              </dl>
+            </div>
+            
+          </div>
+        </div>
+        
+      </footer>
+    </body>
+</html>
+
+
+  
