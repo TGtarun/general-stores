@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS and javascrpit and jquery-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <title>Purchase Stock</title>
+        <style>
+            footer{
+                font-size: 15px;
+                font-family: verdana;
+            }
+            footer a{
+                color: yellow;
+                font-family: verdana;
+                font-size: 15px;
+            }
+            footer a:hover{
+                color: white;
+                font-family: verdana;
+                text-decoration: none;
+                font-size: 17px;
+            }
+            @media screen and (max-width: 768px) {
+                #contMain{
+                height: 1500px;width: 100%;background-color: pink;margin-top: 50px;}
+            }
+
+            @media screen and (min-width: 768px) {
+                #contMain{
+                height: 800px;width: 100%;background-color: pink;margin-top: 50px;}
+            }
+
+            @media screen and (min-width: 992px) {
+                #contMain{
+                height: 800px;width: 100%;background-color: pink;margin-top: 50px;}
+            }
+
+            @media screen and (min-width: 1200px) {
+                #contMain{
+                height: 800px;width: 100%;background-color: pink;margin-top: 50px;}
+            }
+        </style>
+    </head>
+    <body>
+        
+        
+        
+        <nav class="navbar  fixed-top navbar-expand-lg navbar-dark" style="background-color: #212121;">
+            <a class="navbar-brand" href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                App Name
+              </a>
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Billing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Records</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Purchase</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Settings</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">LoyaltyProgram</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Header Ends -->
+        <div class="container-fluid" style="">
+            <div class="container" id="contMain">
+                <div class="container pt-3" style="width: 400px;height: 70px;">
+                    <button class="btn btn-primary btn-lg">Purchase Stock</button>
+                    <button class="btn btn-warning btn-lg">Edit/Add Item</button>
+                </div>
+    
+                <div class="container">
+                    <form>
+                        <h2 class="text-center pt-1" style="color: white;font-family: verdana;">Purchase Stock</h2>
+                          <h5>1).Stock Details</h5>
+                          <div class="row">
+                            <div class="form-group col-md">
+                              <label for="input1">SKU/Barcode</label>
+                              <input type="text" class="form-control" id="input1" placeholder="AJGDYFTFTGJ">
+                            </div>
+                            <div class="form-group col-md">
+                              <label for="input2">HSN/SAC</label>
+                              <input type="text" class="form-control" id="input2" placeholder="AJGDYFTFTGJ">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md">
+                              <label for="input3">Item Name</label>
+                              <input type="text" class="form-control" id="input3" placeholder="AJGDYFTFTGJ">
+                            </div>
+                            <div class="form-group col-md">
+                              <label for="input6">Department</label>
+                              <input type="text" class="form-control" id="input6" placeholder="AJGDYFTFTGJ">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md">
+                                <label for="input4">Category</label>
+                              <input type="text" class="form-control" id="input4" placeholder="AJGDYFTFTGJ">
+                            </div>
+                            <div class="form-group col-md">
+                              <label for="input5">Sub Category</label>
+                              <input type="text" class="form-control" id="input5" placeholder="AJGDYFTFTGJ">
+                            </div>
+                        </div>
+        
+                              <hr>
+                              <h5>2).Pricing and Taxation</h5>
+                              <div class="row">
+                                <div class="form-group col-md">
+                                    <label for="mrp">MRP(₹)</label>
+                                    <input type="text" class="form-control" id="mrp" placeholder="#">
+                                  </div>
+                                <div class="form-group col-md">
+                                    <label for="rate">Buying Price</label>
+                                    <input type="text" class="form-control" id="rate" placeholder="Rate">
+                                </div>
+                                
+                                  <div class="form-group col-md">
+                                    <label for="quan">Selling Price</label>
+                                    <input type="text" class="form-control" id="quan" placeholder="#">
+                                  </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md">
+                                    <label for="cgst">GST(%)</label>
+                                    <input type="text" class="form-control" id="cgst" placeholder="Eg. 18%">
+                                  </div>
+                                <div class="form-group col-md">
+                                  <label for="cgst">CGST(%)</label>
+                                  <input type="text" class="form-control" id="cgst" placeholder="Eg. 18%">
+                                </div>
+                                <div class="form-group col-md">
+                                  <label for="sgst">SGST(%)</label>
+                                  <input type="text" class="form-control" id="sgst" placeholder="Eg. 18%">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md">
+                                  <label for="cgst">Quantity</label>
+                                  <input type="text" class="form-control" id="cgst" placeholder="Eg. 18%">
+                                </div>
+                                <div class="form-group col-md">
+                                  <label for="sgst">Unit</label>
+                                  <input type="text" class="form-control" id="sgst" placeholder="Eg. 18%">
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Rate Includes Tax</label>
+                                  </div>
+                            </div>
+                            
+                            
+                              <div class="text-center pt-1">
+                                  <button type="submit" class="btn btn-success">Add to Inventory</button>
+                                  <button type="submit" class="btn btn-danger">Clear</button>
+                              </div>
+                              
+                                
+                              
+                        </form>
+                </div>
+                
+           </div>
+        </div>
+       
+
+    <!-- footer -->
+    <footer class="section footer-classic context-dark bg-image mt-5" style="background: #2d3246;color: white;">
+        <div class="container pt-1">
+          <div class="row row-30">
+            <div class="col-md-4 col-xl-5 mt-5">
+                <p>Here Comes the description of our app.Here Comes the description of our app.Here Comes the description of our app.Here Comes the description of our app.</p>
+              
+            </div>
+            <div class="col-md-4 col-xl-3 pt-1">
+              <h5>Quick Links</h5>
+              <ul class="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Purchase</a></li>
+                <li><a href="#">Billing</a></li>
+                <li><a href="#">Records</a></li>
+                <li><a href="#">LoyaltyProgram</a></li>
+                <li><a href="#">Settings</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4 pt-1">
+              <h5>Contacts</h5>
+              <dl class="contact-list">
+                <dt>Address:</dt>
+                <dd>dummy city, dummy state, dummy country</dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>email:</dt>
+                <dd><a href="#">dummy@gmail.com</a></dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>phones:</dt>
+                <dd><a href="#">1234567890</a> <span>or</span> <a href="#">1234567891</a>
+                </dd>
+              </dl>
+            </div>
+            
+          </div>
+        </div>
+        
+      </footer>
+    </body>
+</html>
+
+
+  
