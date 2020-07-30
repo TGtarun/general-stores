@@ -30,16 +30,64 @@
 
             @media screen and (max-width: 768px) {
               #divform{
-              height: 1300px;width: 500px;margin-left: screen;background-color: orange;
+              height: 1200px;width: 460px;margin-left: 10px;background-color: #D1C4E9;border-radius: 20px 20px 20px 20px;
              }
              #divtable{
                margin-top: 20px;
+               width: 460;margin-left: 10px;margin-right: 10px;
              }
+             
+             table, thead, tbody, th, td, tr { 
+		display: block; 
+    border-radius: 20px 20px 20px 20px;
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; margin-top: 10px;}
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+    text-align: right;
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "SlNo";text-align: left; }
+	td:nth-of-type(2):before { content: "Code";text-align: left; }
+	td:nth-of-type(3):before { content: "Item Name";text-align: left; }
+	td:nth-of-type(4):before { content: "Price/Unit";text-align: left; }
+	td:nth-of-type(5):before { content: "Quantity";text-align: left; }
+	td:nth-of-type(6):before { content: "GST%";text-align: left; }
+	td:nth-of-type(7):before { content: "Sub Total"; text-align: left;}
+  #total:before { content: "";text-align: left;font-weight: bold; }
+}
             }
 
             @media screen and (min-width: 768px) {
               #divform{
-              height: 800px;width: 500px;background-color: orange;
+              height: 800px;width: 500px;background-color: #D1C4E9;border-radius: 20px 20px 20px 20px;
              }
 
 
@@ -48,7 +96,7 @@
 
             @media screen and (min-width: 992px) {
               #divform{
-              height: 800px;width: 500px;background-color: orange;
+              height: 800px;width: 500px;background-color: #D1C4E9;border-radius: 20px 20px 20px 20px;
              }
                 
              
@@ -57,16 +105,17 @@
             
             @media screen and (min-width: 1200px) {
              #divform{
-              height: 800px;width: 500px;margin-left: 20px;background-color: orange;}
+              height: 800px;width: 500px;margin-left: 20px;background-color: #D1C4E9;border-radius: 20px 20px 20px 20px;}
             }
             
             @media screen and (min-width: 1500px) {
              #divform{
-              height: 800px;width: 500px;margin-left: 20px;background-color: orange;}
+              height: 800px;width: 500px;margin-left: 20px;background-color: #D1C4E9; border-radius: 20px 20px 20px 20px;}
 
               #divtable{
                 margin-left: -50px;width: auto;
             }
+            
             }
             
 
@@ -120,7 +169,7 @@
             <div class="container-fluid" id="divform">
             
               <form>
-              <h2 class="text-center pt-1" style="color: white;font-family: verdana;">Create Invoices</h2>
+              <h2 class="text-center pt-1" style="color: black;font-family: verdana;">Create Invoices</h2>
               <h6 class="text-center">Create invoices in a click!</h6>
                 <h5>1).Item Details</h5>
                 <div class="form-group row">
@@ -220,7 +269,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">1</th>
+                    <td scope="row">1</td>
                     <td>JGDHFHGH</td>
                     <td>Biscuit</td>
                     <td>120</td>
@@ -229,7 +278,7 @@
                     <td>240</td>
                   </tr>
                   <tr>
-                    <th scope="row">1</th>
+                    <td scope="row">1</td>
                     <td>JGDHFHGH</td>
                     <td>Biscuit</td>
                     <td>120</td>
@@ -238,7 +287,7 @@
                     <td>240</td>
                   </tr>
                   <tr>
-                    <th scope="row">1</th>
+                    <td scope="row">1</td>
                     <td>JGDHFHGH</td>
                     <td>Biscuit</td>
                     <td>120</td>
@@ -247,7 +296,7 @@
                     <td>240</td>
                   </tr>
                   <tr>
-                    <th scope="row">1</th>
+                    <td scope="row">1</td>
                     <td>JGDHFHGH</td>
                     <td>Biscuit</td>
                     <td>120</td>
@@ -256,7 +305,7 @@
                     <td>240</td>
                   </tr>
                   <tr>
-                    <th scope="row">1</th>
+                    <td scope="row">1</td>
                     <td>JGDHFHGH</td>
                     <td>Biscuit</td>
                     <td>120</td>
@@ -265,7 +314,7 @@
                     <td>240</td>
                   </tr>
                   <tr>
-                    <th scope="row">1</th>
+                    <td scope="row">1</td>
                     <td>JGDHFHGH</td>
                     <td>Biscuit</td>
                     <td>120</td>
@@ -276,8 +325,9 @@
         
                   <tr>
                     
-                    <td colspan="6"><h4 class="float-right">Total</h4></td>
-                    <td><h4>20040</h4></td>
+                    <td colspan="7" id="total" style="text-align: right;"><h2 style="font-weight: bold;">Total: 675678</h2></td>
+                    
+                    
                   </tr>
 
                 </tbody>
